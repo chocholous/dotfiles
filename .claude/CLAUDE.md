@@ -28,39 +28,16 @@ Po dokončení compaction a otevreni dalsi session
 
 # Coder — koordinace AI tasků
 
-## Setup
-Binary: `/usr/local/bin/coder` (nebo `coder` pokud je v PATH)
 ```bash
 export CODER_URL=https://46-225-180-131.nip.io
 export CODER_SESSION_TOKEN=<viz MEMORY.md>
 ```
-Template: `dev-workspace` (id: f7ab77d1-f401-4a1f-b90b-5e2e0872dc0d)
 
-## Vytvoření AI tasku (= nový workspace s Claude agentem)
+## Vytvoření AI tasku
 ```bash
-coder create <nazev> \
-  --template dev-workspace \
+coder create <nazev> --template dev-workspace \
   --parameter "project=<projekt>" \
-  --parameter "AI Prompt=<co má Claude udělat>" \
-  --yes
+  --parameter "AI Prompt=<prompt>" --yes
 ```
-Claude v workspace autonomně pracuje a reportuje stav do Tasks tabu v Coder UI.
 
-## Projekty s GitHub remote (42)
-agentickeboola_web, applicator, bg, cc-2, cc2-transfer, compare,
-compare-second-branch, cursor-auto-rules-agile-workflow, dataapps,
-datagen, datatalk-events, db-mcp, dotfiles, driver-builder,
-driver_builder, driver_builder_ui, e2b-tereza, get-started,
-get-started-x, linear, mcp-cli, mi-ui2, mysql, mysql-p,
-ng_component, ng_component_k2, osir, padak-e2b, portland-extension,
-pricing, rohlik_bot, salescrew, setup-experiment, small-data-sf-2025,
-STAGEHAND, surf, testing-applicator, testing-applicator-backup,
-thevibecoder_lovable, thevibecoders-revamped, ultra-apify,
-vibecoders-react, vibe-coding
-
-## Správa tasků
-```bash
-coder list                          # stav workspace
-coder logs <workspace> -f           # logy buildu
-curl -H "Coder-Session-Token: $CODER_SESSION_TOKEN" $CODER_URL/api/v2/tasks  # Tasks API
-```
+Detailní infra dokumentace: viz `CLAUDE.md` v kořeni tohoto repozitáře.

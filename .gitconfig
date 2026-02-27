@@ -1,0 +1,11 @@
+[user]
+	email = pavel@chocholous.net
+	name = pavel242242
+[init]
+	defaultBranch = main
+[http]
+	version = HTTP/1.1
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = false

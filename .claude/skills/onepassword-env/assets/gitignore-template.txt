@@ -1,0 +1,9 @@
+# Environment files (secrets)
+.env
+.env.local
+.env.*.local
+.env.backup
+
+# Keep templates (no secrets)
+!.env.tpl
+!.env.example

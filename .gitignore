@@ -30,3 +30,9 @@
 # Python cache
 __pycache__/
 *.pyc
+
+# Python venv
+.venv/
+
+# Secrets
+.env

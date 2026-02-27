@@ -166,6 +166,8 @@ async def run_repl() -> None:
         },
         allowed_tools=["mcp__coder__*"],
         max_turns=25,
+        # Nezavádět globální settings — rychlejší start, žádné cizí MCP servery
+        setting_sources=[],
     )
 
     print(f"\n{BOLD}{CYAN}╔══════════════════════════════════╗{RESET}")

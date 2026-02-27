@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Coder Agent Chat — spustí interaktivní chat s Coder agentem
+# Použití: ./coder-chat
+# Prereq:  .venv/bin/pip install -r requirements.txt
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
+if [[ ! -d ".venv" ]]; then
+    echo "Venv nenalezeno — instaluji..."
+    python3.13 -m venv .venv
+    .venv/bin/pip install -r requirements.txt -q
+fi
+
+exec .venv/bin/python agent.py "$@"

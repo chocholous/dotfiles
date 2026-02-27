@@ -32,7 +32,7 @@ Po dokončení compaction a otevreni dalsi session
 Binary: `/usr/local/bin/coder` (nebo `coder` pokud je v PATH)
 ```bash
 export CODER_URL=https://46-225-180-131.nip.io
-export CODER_SESSION_TOKEN=e1d8ceca0b-XsSN6OaB0tvdRK4xsoIeUQ
+export CODER_SESSION_TOKEN=<viz MEMORY.md>
 ```
 Template: `dev-workspace` (id: f7ab77d1-f401-4a1f-b90b-5e2e0872dc0d)
 
